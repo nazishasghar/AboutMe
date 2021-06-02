@@ -6,8 +6,9 @@
 //
 
 import SwiftUI
+import CoreData
 struct PersonalView: View  {
-    @ObservedObject var info = PersonalInfo()
+    @ObservedObject var info = PersonalInfo.init()
     var bloodGroupArray = ["A+","A-","B+","B-","O+","O-","AB+","AB-"]
     let dateformatter =  DateFormatter()
     @State var isPresented: Bool = false
@@ -20,8 +21,7 @@ struct PersonalView: View  {
             return formatter
         }()
     init() {
-        info = PersonalInfo(context: viewContext)
-       
+       info = PersonalInfo(context: viewContext)
     }
     var body: some View {
         if personalFetchin.isEmpty{
@@ -64,10 +64,10 @@ struct PersonalView: View  {
                   }
                   Section(header:Text("Organ Donor").padding(.horizontal)){
                     if ((personalFetchin.first?.organdonor == true)){
-                        Text("A Organ Donor")
+                        Text("An Organ Donor")
                     }
                     else{
-                        Text("Not A Organ Donor")
+                        Text("Not An Organ Donor")
                     }
                   }
               }

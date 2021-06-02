@@ -38,12 +38,19 @@ struct AddContact : View {
                     }
                     Section{
                         TextField("Enter PhoneNumber", text: $phoneNumber.onNone("")).keyboardType(.numberPad)
+                            
                     }
                 }
+                .adaptsToKeyboard()
                 .navigationBarTitle("Details Of Contact")
-                .navigationBarItems(trailing: Done)
+                .navigationBarItems(leading:Cancel ,trailing: Done)
                 .ignoresSafeArea()
         }
+    var Cancel : some View{
+        Button("Cancel"){
+            presentionMode.wrappedValue.dismiss()
+        }
+    }
     var Done : some View{
         Button("Done"){
             let newContact =  ContactsInfo(context: viewContext)

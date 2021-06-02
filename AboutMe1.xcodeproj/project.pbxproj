@@ -15,6 +15,7 @@
 		BC27635A264AE6DF0077B495 /* AboutMe1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC276358264AE6DF0077B495 /* AboutMe1.xcdatamodeld */; };
 		BC276364264AE6E90077B495 /* AddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC276362264AE6E90077B495 /* AddContactView.swift */; };
 		BC45EEE7264AEC5300339282 /* ContentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC45EEE6264AEC5300339282 /* ContentsView.swift */; };
+		BC548E642667752900833D95 /* AdaptToKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC548E632667752900833D95 /* AdaptToKeyboard.swift */; };
 		BC5DEAD826566433002EEC08 /* MapViewTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5DEAD726566433002EEC08 /* MapViewTesting.swift */; };
 		BCB015BE264C2B0000926252 /* AddPersonalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB015BD264C2B0000926252 /* AddPersonalInfo.swift */; };
 		BCB015C0264C2B1900926252 /* EditPersonalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB015BF264C2B1900926252 /* EditPersonalInfo.swift */; };
@@ -33,6 +34,7 @@
 		BC27635B264AE6DF0077B495 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC276362264AE6E90077B495 /* AddContactView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddContactView.swift; sourceTree = "<group>"; };
 		BC45EEE6264AEC5300339282 /* ContentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsView.swift; sourceTree = "<group>"; };
+		BC548E632667752900833D95 /* AdaptToKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptToKeyboard.swift; sourceTree = "<group>"; };
 		BC5DEAD726566433002EEC08 /* MapViewTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewTesting.swift; sourceTree = "<group>"; };
 		BCB015BD264C2B0000926252 /* AddPersonalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonalInfo.swift; sourceTree = "<group>"; };
 		BCB015BF264C2B1900926252 /* EditPersonalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPersonalInfo.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				BC5DEAD726566433002EEC08 /* MapViewTesting.swift */,
 				BCD29FC0264D219F00CB5204 /* DetailsContactView.swift */,
 				BC276362264AE6E90077B495 /* AddContactView.swift */,
+				BC548E632667752900833D95 /* AdaptToKeyboard.swift */,
 				BCB015BD264C2B0000926252 /* AddPersonalInfo.swift */,
 				BCB015BF264C2B1900926252 /* EditPersonalInfo.swift */,
 				BC27634D264AE6DD0077B495 /* AboutMeApp.swift */,
@@ -171,6 +174,7 @@
 				BCBB2649264BE9EE00DE0D70 /* MapView.swift in Sources */,
 				BC276364264AE6E90077B495 /* AddContactView.swift in Sources */,
 				BCD29FC1264D219F00CB5204 /* DetailsContactView.swift in Sources */,
+				BC548E642667752900833D95 /* AdaptToKeyboard.swift in Sources */,
 				BC45EEE7264AEC5300339282 /* ContentsView.swift in Sources */,
 				BC27634E264AE6DD0077B495 /* AboutMeApp.swift in Sources */,
 				BC5DEAD826566433002EEC08 /* MapViewTesting.swift in Sources */,

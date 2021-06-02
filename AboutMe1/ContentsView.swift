@@ -8,7 +8,7 @@
 import SwiftUI
 import LocalAuthentication
 import CoreData
-var isUnlocked = false
+var isUnlocked = true
 struct ContentsView: View {
     @Environment(\.managedObjectContext) var viewContext
     @FetchRequest(entity: PersonalInfo.entity(), sortDescriptors: []) var personal : FetchedResults<PersonalInfo>
