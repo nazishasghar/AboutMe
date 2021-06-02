@@ -18,7 +18,7 @@
 		BC548E642667752900833D95 /* AdaptToKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC548E632667752900833D95 /* AdaptToKeyboard.swift */; };
 		BC5DEAD826566433002EEC08 /* MapViewTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5DEAD726566433002EEC08 /* MapViewTesting.swift */; };
 		BCB015BE264C2B0000926252 /* AddPersonalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB015BD264C2B0000926252 /* AddPersonalInfo.swift */; };
-		BCB015C0264C2B1900926252 /* EditPersonalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB015BF264C2B1900926252 /* EditPersonalInfo.swift */; };
+		BCB4F1022667A8DF0098A1AA /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB4F1012667A8DF0098A1AA /* SearchBarView.swift */; };
 		BCBB2649264BE9EE00DE0D70 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBB2648264BE9EE00DE0D70 /* MapView.swift */; };
 		BCD29FC1264D219F00CB5204 /* DetailsContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD29FC0264D219F00CB5204 /* DetailsContactView.swift */; };
 /* End PBXBuildFile section */
@@ -37,7 +37,7 @@
 		BC548E632667752900833D95 /* AdaptToKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptToKeyboard.swift; sourceTree = "<group>"; };
 		BC5DEAD726566433002EEC08 /* MapViewTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewTesting.swift; sourceTree = "<group>"; };
 		BCB015BD264C2B0000926252 /* AddPersonalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonalInfo.swift; sourceTree = "<group>"; };
-		BCB015BF264C2B1900926252 /* EditPersonalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPersonalInfo.swift; sourceTree = "<group>"; };
+		BCB4F1012667A8DF0098A1AA /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		BCBB2648264BE9EE00DE0D70 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		BCD29FC0264D219F00CB5204 /* DetailsContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsContactView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				BC45EEE6264AEC5300339282 /* ContentsView.swift */,
+				BCB4F1012667A8DF0098A1AA /* SearchBarView.swift */,
 				BC0A9B98264D765C00C05F51 /* PersonalView.swift */,
 				BCBB2648264BE9EE00DE0D70 /* MapView.swift */,
 				BC5DEAD726566433002EEC08 /* MapViewTesting.swift */,
@@ -80,7 +81,6 @@
 				BC276362264AE6E90077B495 /* AddContactView.swift */,
 				BC548E632667752900833D95 /* AdaptToKeyboard.swift */,
 				BCB015BD264C2B0000926252 /* AddPersonalInfo.swift */,
-				BCB015BF264C2B1900926252 /* EditPersonalInfo.swift */,
 				BC27634D264AE6DD0077B495 /* AboutMeApp.swift */,
 				BC276351264AE6DF0077B495 /* Assets.xcassets */,
 				BC276356264AE6DF0077B495 /* Persistence.swift */,
@@ -172,6 +172,7 @@
 				BCB015BE264C2B0000926252 /* AddPersonalInfo.swift in Sources */,
 				BC0A9B99264D765C00C05F51 /* PersonalView.swift in Sources */,
 				BCBB2649264BE9EE00DE0D70 /* MapView.swift in Sources */,
+				BCB4F1022667A8DF0098A1AA /* SearchBarView.swift in Sources */,
 				BC276364264AE6E90077B495 /* AddContactView.swift in Sources */,
 				BCD29FC1264D219F00CB5204 /* DetailsContactView.swift in Sources */,
 				BC548E642667752900833D95 /* AdaptToKeyboard.swift in Sources */,
@@ -179,7 +180,6 @@
 				BC27634E264AE6DD0077B495 /* AboutMeApp.swift in Sources */,
 				BC5DEAD826566433002EEC08 /* MapViewTesting.swift in Sources */,
 				BC27635A264AE6DF0077B495 /* AboutMe1.xcdatamodeld in Sources */,
-				BCB015C0264C2B1900926252 /* EditPersonalInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

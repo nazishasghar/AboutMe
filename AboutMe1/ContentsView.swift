@@ -12,7 +12,6 @@ var isUnlocked = true
 struct ContentsView: View {
     @Environment(\.managedObjectContext) var viewContext
     @FetchRequest(entity: PersonalInfo.entity(), sortDescriptors: []) var personal : FetchedResults<PersonalInfo>
-     
     var body: some View {
         if isUnlocked {
             TabView{
@@ -21,48 +20,49 @@ struct ContentsView: View {
                 }
                 .tabItem {Image(systemName: "person.crop.circle.fill") }
                 VStack{
-                    
                    MapViewTesting()
                 }
                 .tabItem { Image(systemName: "map.fill")}
                 NavigationView{
-                    
                     PersonalView()
                     }
-                
                 .tabItem { Image(systemName: "person.fill") }
-                
             }
         }
         else{
             authenticateView()
         }
-        
     }
-    
-   
-    
     struct ContactList : View {
+        @State var isEdited : Bool = false
+        @State var searchText : String = ""
         @Environment(\.managedObjectContext) var viewContext
         @State var isPresented = false
+        @State private var tappedLink: String? = nil
         @FetchRequest(entity: ContactsInfo.entity(), sortDescriptors: [],predicate:NSPredicate(format: "name != nil")) var Contacts: FetchedResults<ContactsInfo>
         var body: some View {
+            VStack{
+                SearchBar(text: $searchText,placeholder: "Search Contacts")
+                    .padding(.top)
                 List{
-                    ForEach(Contacts,id:\.self){ contacts in
-                        VStack(alignment:.leading){
+                    ForEach(Contacts.filter({ searchText.isEmpty ? true : $0.name!.lowercased().contains(self.searchText.lowercased())})){ contacts in
+                        ZStack{
+                            Button("") {}
+                            VStack(alignment:.leading){
                             Text("\(contacts.name ?? "")")
                             Text("\(contacts.address ?? "")").font(.caption2)
                             Text("\(contacts.email ?? "" )").font(.caption2)
                                     NavigationLink(
                                         destination:DetailsContactView(Contact: contacts)){
                                     }
+                            }
                         }
-                    }.onDelete(perform: { indexSet in
+                    }
+                    .onDelete(perform: { indexSet in
                         deleteItem(at: indexSet)
                     })
-                
             }
-            
+            }
             .navigationBarItems(leading: EditButton())
             .navigationTitle("Add Contact")
             .navigationBarItems(trailing:Button(action: {
@@ -71,37 +71,22 @@ struct ContentsView: View {
             })
                 .sheet(isPresented: $isPresented, content: {
                     AddContactView().environment(\.managedObjectContext, viewContext)
-                   
                 })
-                    
-                
             )
         }
-        
+       
         func deleteItem(at offsets:IndexSet) {
             for index in offsets{
                 let item = Contacts[index]
                 PersistenceController.shared.delete(item)
             }
         }
-        
     }
-    
-  
-    
-    
-    
-    
-    
-    
-    
-    
     struct authenticateView : View {
         
         var body: some View
         {
             VStack{
-                
                 Text("Tap Any Where To Authenticate")
                     .font(.italic(.title)())
             }.frame(maxWidth:.infinity ,maxHeight: .infinity)
@@ -123,21 +108,13 @@ struct ContentsView: View {
                 else{
                     
                 }
-                
             }
-            }
+        }
            else{
             
            }
-            
         }
-
-
     }
-
-
-
-
 }
 
 

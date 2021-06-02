@@ -23,7 +23,7 @@ struct DetailsContactView: View {
                 TextField("Enter Email", text: Binding($Contact.email)!).keyboardType(.emailAddress)
             }
             Section{
-                DatePicker("Enter BirthDate", selection:Binding($Contact.dateofbirth)!)
+                DatePicker("Enter BirthDate", selection:Binding($Contact.dateofbirth)!,displayedComponents:.date)
             }
             Section{
                 TextField("Enter PhoneNumber", text:Binding($Contact.phonenumber)!).keyboardType(.numberPad)
