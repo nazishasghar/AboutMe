@@ -6,37 +6,43 @@
 //
 
 import SwiftUI
-
-struct ChatView: View {
-    @State var SearchMessage = ""
-    var body: some View {
-        NavigationView{
-            VStack(alignment:.leading){
-                SearchBar(text: $SearchMessage, placeholder: "Search Messages")
-                List(0..<10){ msg in
-                    HStack{
-                        Image(systemName: "message.circle.fill").frame(alignment:.leading).scaledToFit()
-                        VStack(alignment:.leading , spacing: 5){
-                            Text("Name").fontWeight(.semibold).lineLimit(2)
-                            Text("Address").font(.subheadline).foregroundColor(.secondary)
-                        }.padding(.horizontal)
-                    }
-                }
-            }.navigationBarItems(trailing: NewChat)
-            .navigationBarTitle("Messages")
-        }
-    }
-    var NewChat : some View{
-        Button(action: {
-            
-        }, label: {
-            Image(systemName: "square.and.pencil")
-        })
+struct CustomField : ViewModifier {
+    func body(content: Content) -> some View {
+       return content
+            .padding()
+            .background(Color(.secondarySystemBackground))
+            .cornerRadius(7)
     }
 }
-
+struct ChatView: View {
+    @EnvironmentObject var model :AppStateModel
+    @State var message : String = ""
+    let otherUsername : String
+    init(otherUsername: String) {
+        self.otherUsername = otherUsername
+    }
+    var body: some View {
+        VStack{
+        ScrollView(.vertical){
+            ForEach(model.messages , id: \.self){ message in
+                ChatRow(text: message.text, type: message.type).padding(3)
+            }
+        }
+            HStack{
+                TextField("Message..." , text: $message)
+                    .modifier(CustomField())
+                SendButton(text: $message)
+            }
+        }
+        .navigationBarTitle(otherUsername, displayMode: .inline)
+        .onAppear(){
+            model.otherUsername = otherUsername
+            model.observeChat()
+        }
+    }
+  }
 struct ChatView_Previews: PreviewProvider {
     static var previews: some View {
-        ChatView()
+        ChatView(otherUsername: "Samantha")
     }
 }

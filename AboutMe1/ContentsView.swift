@@ -27,7 +27,8 @@ struct ContentsView: View {
                     PersonalView()
                 }
                 .tabItem { Image(systemName: "person.fill") }
-                    ChatView()
+               
+                    ConversationView()
                 .tabItem({Image(systemName: "message.circle.fill")})
             }
         }
